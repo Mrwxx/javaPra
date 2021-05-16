@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "mycar",
+      "type": "com.boot.pojo.Car",
+      "sourceType": "com.boot.pojo.Car"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mycar.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.boot.pojo.Car",
+      "defaultValue": 0
+    },
+    {
+      "name": "mycar.price",
+      "type": "java.lang.Integer",
+      "sourceType": "com.boot.pojo.Car",
+      "defaultValue": 0
+    }
+  ],
+  "hints": []
+}

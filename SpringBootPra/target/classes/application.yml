@@ -1,0 +1,6 @@
+mycar:
+  age: 12
+  price: 1
+#spring:
+#  mvc:
+#    static-path-pattern: /res/**

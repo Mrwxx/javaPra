@@ -1,0 +1,15 @@
+#Redis服务器地址
+spring:
+  redis:
+    host: 192.168.112.130
+    port: 6379
+    database: 0
+    timeout: 1800000
+    #可以选择jedis，也可以选择lettuce
+    lettuce:
+      pool:
+        max-wait: -1
+        max-active: 20
+        max-idle: 5
+        min-idle: 0
+  .
