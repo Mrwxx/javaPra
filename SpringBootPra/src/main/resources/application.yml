@@ -4,3 +4,10 @@ mycar:
 #spring:
 #  mvc:
 #    static-path-pattern: /res/**
+mapper:
+  identity: MYSQL #主键策略
+  mappers: com.boot.mapper.TkMapper #通用基类的配置
+
+
+
+

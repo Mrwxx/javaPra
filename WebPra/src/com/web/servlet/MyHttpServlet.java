@@ -4,6 +4,7 @@ import javafx.scene.control.cell.ChoiceBoxTableCell;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +14,7 @@ import java.io.IOException;
  * @author Mr.wxx
  * @create 2021-04-06-15:59
  **/
+@WebServlet(name = "HttpServlet", urlPatterns = "/http")
 public class MyHttpServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -24,11 +26,17 @@ public class MyHttpServlet extends HttpServlet {
         //获取请求参数
         System.out.println(req.getParameter("username"));
         System.out.println(req.getParameter("password"));
-        for (String hobby : req.getParameterValues("hobby")) {
-            System.out.println(hobby);
-        }
+//        for (String hobby : req.getParameterValues("hobby")) {
+//            System.out.println(hobby);
+//        }
+        //转发到/context
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/context");
-        requestDispatcher.forward(req, resp);
+        requestDispatcher.forward(req,resp);
+        //转发到/html/a.html
+        //RequestDispatcher requestDispatcher1 = req.getRequestDispatcher("/html/a.html");
+        //转发
+        //requestDispatcher1.forward(req,resp);
+//        requestDispatcher.forward(req, resp);
     }
 
     @Override

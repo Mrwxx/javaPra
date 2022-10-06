@@ -16,11 +16,13 @@ import wxx.javaPra.anno.aop.CalAspect;
 public class AopConfig {
     @Bean
     public Cal getCal(){
+        System.out.println("Cal类注册");
         return new Cal();
     }
 
     @Bean
     public CalAspect getCalAspect(){
+        System.out.println("CalAspect类注册");
         return new CalAspect();
     }
 }

@@ -20,8 +20,7 @@
         <constructor-arg name="addr" value="beijing"/>
     </bean>
 
-    <bean id="person3" class="factoryBean.MyFactoryBean">
-    </bean>
+    <bean id="person3" class="factoryBean.MyFactoryBean"></bean>
     <bean id="postProcessor" class="beanPostProcessor.MyPostProcessor"></bean>
     
     <context:component-scan base-package="utils, inter.impl"/>

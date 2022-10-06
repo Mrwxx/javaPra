@@ -3,6 +3,7 @@ package com.boot.pojo;
 import jdk.nashorn.internal.objects.annotations.Constructor;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import jdk.nashorn.internal.objects.annotations.Setter;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "mycar")
 @Component
 public class Car {
+    @Value("${mycar.age}")
     private int price;
     private int age;
 

@@ -1,5 +1,6 @@
 package wxx.javaPra.anno.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -30,6 +31,7 @@ public class PojoConfig {
     @Scope(value = "single")
     @Bean(value = "wxx",initMethod = "init", destroyMethod = "destroy")
     @Lazy
+    @Value(value = "sdfx")
     public Person person(){
         return new Person("wangxu", 23);
     }

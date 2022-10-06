@@ -3,13 +3,20 @@ package com.web.servlet;
 
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Enumeration;
 
 /**
  * @author Mr.wxx
  * @create 2021-04-06-13:24
  **/
+@WebServlet(name = "MyServlet", urlPatterns = "/hello", initParams = {
+    @WebInitParam(name = "username", value = "root"),
+        @WebInitParam(name = "password", value = "123")} )
 public class MyServlet implements Servlet {
 
     public MyServlet(){
@@ -33,14 +40,19 @@ public class MyServlet implements Servlet {
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         System.out.println("Servlet已执行");
         HttpServletRequest httpServletRequest = (HttpServletRequest)servletRequest;
+        HttpServletResponse httpServletResponse =  (HttpServletResponse)servletResponse;
+        //获取请求头
+        System.out.println(httpServletRequest.getHeader("name"));
+        //设置响应头
+        httpServletResponse.setHeader("return","wangxu");
         String method = httpServletRequest.getMethod();
         if(method.equals("GET")){
             doGet();
         }else if(method.equals("POST")){
             doPost();
         }
-        ServletConfig servletConfig = getServletConfig();
     }
+
     //Get请求处理方法
     public void doGet(){
         System.out.println("Get请求");

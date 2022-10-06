@@ -1,5 +1,6 @@
 package wxx.javaPra.anno.aop;
 
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,5 +13,10 @@ public class Cal {
     public int add(int a, int b){
         System.out.println("方法执行");
         return a+b;
+    }
+
+    public static void main(String[] args) {
+        Cal cal = new Cal();
+        cal.add(1,2);
     }
 }

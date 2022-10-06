@@ -7,21 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="webMavenPra" />
-        <module name="SpringAnno" />
-        <module name="redisPra" />
         <module name="JucPra" />
-        <module name="SpringBootPra" />
+        <module name="redisPra" />
         <module name="JDBCPra" />
+        <module name="JavaEEPra" />
+        <module name="Mybatis_Plus_pra" />
+        <module name="RabbitMQPra" />
         <module name="SpringMvcPra" />
+        <module name="usedClass" />
+        <module name="Enum_Anno" />
+        <module name="SpringAnno" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="webMavenPra" target="1.8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Mybatis_Plus_pra" options="-parameters" />
+      <module name="RabbitMQPra" options="-parameters" />
       <module name="SpringBootPra" options="-parameters" />
     </option>
   </component>
