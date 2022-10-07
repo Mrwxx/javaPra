@@ -16,8 +16,8 @@ public class test2 {
         int i = inputStream.readInt();
 //        DataInput dataInput = new DataInput();
 
-        var fout = new FileOutputStream("test.zip");
-        var zout = new ZipOutputStream(fout);
+//        var fout = new FileOutputStream("test.zip");
+//        var zout = new ZipOutputStream(fout);
         ArrayList<Integer> integers = new ArrayList<>();
         integers.remove(0);
         Integer[] integers1 = integers.toArray(new Integer[integers.size()]);

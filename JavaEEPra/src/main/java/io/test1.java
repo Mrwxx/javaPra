@@ -11,20 +11,20 @@ import java.util.Scanner;
 public class test1 {
     public static void main(String[] args) {
 
-        var staff = new Employee[3];
+        Employee[] staff = new Employee[3];
         staff[0] = new Employee("aa", 1);
         staff[1] = new Employee("bb", 2);
         staff[2] = new Employee("cc", 3);
         int[] ints = new int[3];
         int[] ans = new int[3];
         int[] ints1 = Arrays.copyOf(ans, ans.length);
-        try(var out = new PrintWriter("a.txt", String.valueOf(StandardCharsets.UTF_8))){
+        try(PrintWriter out = new PrintWriter("a.txt", String.valueOf(StandardCharsets.UTF_8))){
             writeData(staff, out);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try(var in = new Scanner(new FileInputStream("a.txt"), "UTF-8")){
+        try(Scanner in = new Scanner(new FileInputStream("a.txt"), "UTF-8")){
             Employee[] newStaff = readData(in);
 
             for(Employee e: newStaff){
@@ -47,7 +47,7 @@ public class test1 {
         int n = in.nextInt();
         in.nextLine();
 
-        var employees = new Employee[n];
+        Employee[] employees = new Employee[n];
         for(int i = 0; i < n; ++i){
             employees[i] = readEmployee(in);
         }

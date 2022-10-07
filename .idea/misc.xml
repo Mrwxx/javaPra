@@ -3,23 +3,12 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Mybatis_Plus_pra" />
-    <file type="web" url="file://$PROJECT_DIR$/SpringBootPra" />
-    <file type="web" url="file://$PROJECT_DIR$/webMavenPra" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/SpringPra/pom.xml" />
-        <option value="$PROJECT_DIR$/JDBCPra/pom.xml" />
-        <option value="$PROJECT_DIR$/WebPra/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/SpringBootPra/BootMvcPra/pom.xml" />
-        <option value="$PROJECT_DIR$/SpringMvcPra/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">

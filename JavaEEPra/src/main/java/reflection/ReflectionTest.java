@@ -11,12 +11,12 @@ import java.util.Properties;
  * @author Mr.wxx
  * @create 2021-03-26-16:25
  **/
-public class Test {
+public class ReflectionTest {
 
     @org.junit.Test
     public void test8() throws IllegalAccessException, InstantiationException {
-        Class<? extends Test> aClass = this.getClass();
-        Test test = aClass.newInstance();
+        Class<? extends ReflectionTest> aClass = this.getClass();
+        ReflectionTest test = aClass.newInstance();
 //        test.test8();
         Method[] methods = aClass.getMethods();
         for (Method method : methods) {
@@ -28,10 +28,12 @@ public class Test {
     }
 
 
-
+    /***
+     * 三种类加载器
+     */
     @org.junit.Test
     public void test(){
-        // 三种类加载器
+        //
         ClassLoader classLoader = this.getClass().getClassLoader();
         ClassLoader parent = classLoader.getParent();
         System.out.println(parent);
@@ -40,6 +42,10 @@ public class Test {
         System.out.println(classLoader);
     }
 
+    /***
+     * 类加载器加载配置文件
+     * @throws IOException
+     */
     @org.junit.Test
     public void test2() throws IOException {
         //类加载器加载配置文件
@@ -56,6 +62,13 @@ public class Test {
         System.out.println(properties.getProperty("age"));
     }
 
+    /***
+     * 构建运行时类对象
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws NoSuchMethodException
+     * @throws InvocationTargetException
+     */
     @org.junit.Test
     public void test3() throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         // 构建运行时类对象
@@ -101,12 +114,22 @@ public class Test {
         }
     }
 
+    /***
+     * 访问运行时类的指定结构
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws NoSuchFieldException
+     * @throws NoSuchMethodException
+     * @throws InvocationTargetException
+     */
     @org.junit.Test
     public void test5() throws IllegalAccessException, InstantiationException, NoSuchFieldException, NoSuchMethodException, InvocationTargetException {
         Class<Person> personClass = Person.class;
+        // 构造运行时对象
         Person person = personClass.newInstance();
         //调用属性
         Field name = personClass.getDeclaredField("name");
+        // private属性或方法需要设置，取消Java语言访问检查
         name.setAccessible(true);
         name.set(person, "wxx");
         System.out.println(name.get(person));

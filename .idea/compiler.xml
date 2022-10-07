@@ -9,17 +9,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="JucPra" />
         <module name="redisPra" />
+        <module name="usedClass" />
         <module name="JDBCPra" />
-        <module name="JavaEEPra" />
         <module name="Mybatis_Plus_pra" />
         <module name="RabbitMQPra" />
         <module name="SpringMvcPra" />
-        <module name="usedClass" />
+        <module name="JavaEEPra" />
         <module name="Enum_Anno" />
         <module name="SpringAnno" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
