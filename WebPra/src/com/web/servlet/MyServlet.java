@@ -1,7 +1,5 @@
 package com.web.servlet;
 
-
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;

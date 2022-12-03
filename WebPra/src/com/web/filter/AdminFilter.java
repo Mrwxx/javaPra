@@ -8,7 +8,7 @@ import java.io.IOException;
 
 /**
  * @author Mr.wxx
- * @create 2021-04-08-9:04
+ * @since 2021-04-08-9:04
  **/
 @WebFilter(filterName = "AdminFilter", urlPatterns = "/admin/file.html")
 public class AdminFilter implements Filter {
@@ -17,8 +17,9 @@ public class AdminFilter implements Filter {
         System.out.println("AdminFilter初始化");
     }
 
-    /***
-     * 拦截请求，
+    /**
+     * 拦截请求
+     *
      * @param servletRequest
      * @param servletResponse
      * @param filterChain

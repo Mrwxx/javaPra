@@ -32,7 +32,6 @@ public class DownloadServlet extends HttpServlet {
         //4.将文件类型返回给客户端
         response.setContentType(mimeType);
 
-
         Cookie cookie = new Cookie("name", "wangux");
         cookie.setMaxAge(1);
         cookie.setPath("/path");

@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="JucPra" />
         <module name="redisPra" />
-        <module name="usedClass" />
+        <module name="JavaWebPra" />
         <module name="JDBCPra" />
+        <module name="JavaEEPra" />
         <module name="Mybatis_Plus_pra" />
         <module name="RabbitMQPra" />
+        <module name="WebPra" />
         <module name="SpringMvcPra" />
-        <module name="JavaEEPra" />
+        <module name="usedClass" />
         <module name="Enum_Anno" />
         <module name="SpringAnno" />
       </profile>
