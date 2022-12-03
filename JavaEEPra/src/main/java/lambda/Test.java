@@ -1,26 +1,24 @@
 package lambda;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.function.*;
 
 /**
+ * lambda表达式
  * @author Mr.wxx
  * @create 2021-03-28-10:12
  **/
 public class Test {
-
     @org.junit.Test
     public void test1(){
-        // 函数式接口
+        // 函数式接口，lambda表达式可以实现函数式接口
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("wxx");
         arrayList.add("aaa");
         List<String> a = find(arrayList, s -> s.contains("a"));
         a.forEach(b-> System.out.println(b));
         out(arrayList, System.out::println);
+        Collections.sort(arrayList, (b, c) -> { return b.compareTo(c); });
 
         Comparator<Integer> t1 = (s1, s2) -> Integer.compare(s1,s2);
         Comparator<Integer> t2 = Integer::compare;
@@ -40,10 +38,18 @@ public class Test {
 //
 //            }
 //        };
+
+        // 内置核心函数式接口的使用
+        // 函数型接口
         Function<Double, Long> f2 = d-> Math.round(d);
         Function<Double, Long> f3 = Math::round;
 
-        // 方法引用
+        // 供给型接口
+        // 将lambda表达式转为方法引用，也就是函数式接口的一个实例
+        // 方法引用是已经有实现的lambda体，是语法糖
+//        对象::实例方法名
+//        类::静态方法名
+//        类::实例方法名
         Supplier<Person> supplier = Person::new;
         Person person1 = supplier.get();
         BiFunction<String, Integer, Person> s2 = Person::new;
@@ -55,9 +61,7 @@ public class Test {
         Supplier<Integer> s1 = person::getAge;
         System.out.println(s1.get());
 
-
-
-
+//        Consumer<Long> consumer = MyInter::cal;
     }
 
     public List<String> find(List<String> list, Predicate<String> pre){
@@ -106,4 +110,8 @@ public class Test {
 @FunctionalInterface
 interface MyInter<T>{
     public abstract T getValue(T t);
+
+    default void cal(T t){
+        System.out.println(t);
+    }
 }

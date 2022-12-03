@@ -8,13 +8,14 @@ import java.io.*;
  * @author Mr.wxx
  * @create 2021-06-21-21:53
  **/
-public class Tests {
+public class LoadFile {
     public static void main(String[] args) {
-
 
     }
 
-    //默认从module中读取
+    /***
+     * 默认从module中读取
+     */
     @Test
     public void test1() {
         System.out.println(A.m);
@@ -41,7 +42,9 @@ public class Tests {
         }
     }
 
-    //类加载器getResourceAsStream()从src目录下读取
+    /***
+     * 类加载器getResourceAsStream()从src目录下读取
+     */
     @Test
     public void test2(){
         InputStream resourceAsStream = null;

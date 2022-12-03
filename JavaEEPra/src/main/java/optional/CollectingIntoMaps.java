@@ -7,8 +7,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class CollectingIntoMaps {
-
-
     public static class Person{
         private int id;
         private String name;
@@ -47,13 +45,11 @@ public class CollectingIntoMaps {
         return Stream.of(new Person(1001, "Perter"), new Person(1002, "dad"), new Person(1003, "mom"));
 
     }
-
     public static void main(String[] args) {
         Map<Integer, String> idToName = people().collect(Collectors.toMap(Person::getId, Person::getName));
         System.out.println("idToName" +idToName);
 
         Map<Integer, Person> idToPerson = people().collect(Collectors.toMap(Person::getId, Function.identity()));
         System.out.println("idToPerson" +idToPerson.getClass().getSimpleName() +idToPerson);
-
     }
 }
