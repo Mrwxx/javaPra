@@ -16,13 +16,13 @@
         <module name="RabbitMQPra" />
         <module name="WebPra" />
         <module name="SpringMvcPra" />
+        <module name="leetcode" />
         <module name="usedClass" />
         <module name="Enum_Anno" />
         <module name="SpringAnno" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
