@@ -3,6 +3,9 @@ package com.leetcode.stringCode.huiwenchuan;
 import sun.util.resources.cldr.ga.CurrencyNames_ga;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -10,32 +13,34 @@ import java.util.stream.Stream;
  * @create 2022-12-04-10:55
  **/
 public class E125 {
-
+    static int a = 1;
     public static void main(String[] args) {
         E125 e125 = new E125();
-        e125.isPalindrome("race a car");
+        e125.isPalindrome("null");
     }
 
     public boolean isPalindrome(String s) {
         // 思路：遍历去除非字母，再转小写字母，最后验证回文串
-
         // 判空
         if(null == s || s.length() == 0 || s.length() == 1){
             return true;
         }
+        a = 2;
+        int[] ints = {1, 2, 3};
+        long ansNum = Arrays.stream(ints).filter(i -> i < 3).limit(2).count();
         // 遍历去除非字母字符与转小写
         StringBuilder stringBuilder = new StringBuilder();
         char[] sCharArray = s.toCharArray();
-        for (char c : sCharArray) {
+        for (char i : sCharArray) {
             // 判断是否是字母或数字
-            if(!Character.isAlphabetic(c) && !Character.isDigit(c)){
+            if(!Character.isAlphabetic(i) && !Character.isDigit(i)){
                 continue;
             }
-            else if(Character.isUpperCase(c)){
-                stringBuilder.append(Character.toLowerCase(c));
+            else if(Character.isUpperCase(i)){
+                stringBuilder.append(Character.toLowerCase(i));
             }
             else{
-                stringBuilder.append(c);
+                stringBuilder.append(i);
             }
         }
         // 验证回文串，可以通过双指针首尾遍历验证
