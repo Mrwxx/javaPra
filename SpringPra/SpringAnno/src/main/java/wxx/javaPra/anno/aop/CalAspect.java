@@ -6,6 +6,7 @@ import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -18,7 +19,8 @@ import java.util.Map;
  **/
 @Aspect
 @Component
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy(proxyTargetClass = false, exposeProxy = true)
+@Order(0)
 public class CalAspect {
 
     @Pointcut(value = "execution(public * wxx.javaPra.anno.aop.Cal.*(..))")
