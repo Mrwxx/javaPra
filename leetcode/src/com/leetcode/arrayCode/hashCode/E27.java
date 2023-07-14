@@ -12,6 +12,7 @@ public class E27 {
         int left = 0, right = len - 1;
         while (left <= right) {
             // 从左开始查找==val的值
+            int mid = left + (right - left) / 2;
             while (left <= right && nums[left] != val) {
                 left++;
             }
