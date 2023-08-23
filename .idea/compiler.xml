@@ -7,18 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Enum_Anno" />
         <module name="JucPra" />
         <module name="redisPra" />
-        <module name="JavaWebPra" />
+        <module name="usedClass" />
         <module name="JDBCPra" />
-        <module name="JavaEEPra" />
         <module name="Mybatis_Plus_pra" />
         <module name="RabbitMQPra" />
         <module name="WebPra" />
         <module name="SpringMvcPra" />
-        <module name="usedClass" />
+        <module name="JavaWebPra" />
         <module name="leetcode" />
+        <module name="JavaEEPra" />
+        <module name="Enum_Anno" />
         <module name="SpringAnno" />
       </profile>
     </annotationProcessing>
