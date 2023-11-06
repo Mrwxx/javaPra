@@ -26,7 +26,7 @@ public class M34 {
                 right = mid - 1;
             }
         }
-
+        return null;
 
     }
 
